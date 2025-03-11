@@ -1,12 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
-#timer {
-    font-size: 3rem;
-    margin-bottom: 20px;
+h1 {
+  color: #343a40;
 }
 
-.btn {
-    margin-right: 10px;
+#message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }
