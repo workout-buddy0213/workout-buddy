@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workout Buddy</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Buddy</title>
+  <!-- Link to Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Workout Buddy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#" id="homeLink">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="timerLink">Timer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="loginLink">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="signupLink">Sign Up</a></li>
-                    <li class="nav-item"><a class="nav-link d-none" href="#" id="logoutLink">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Timer Section -->
-    <div id="timerSection" class="container mt-5 d-none">
-        <h2>Workout Timer</h2>
-        <div id="timer">00:00</div>
-        <button id="startTimer" class="btn btn-success">Start</button>
-        <button id="stopTimer" class="btn btn-danger">Stop</button>
-        <button id="resetTimer" class="btn btn-secondary">Reset</button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Workout Buddy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="signup-btn">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="login-btn">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout-btn" style="display: none;">Logout</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Firebase Auth Section -->
-    <div id="authSection" class="container mt-5">
-        <h2 id="authHeader">Login</h2>
-        <form id="authForm">
-            <div class="mb-3">
-                <input type="email" id="email" class="form-control" placeholder="Email" required />
-            </div>
-            <div class="mb-3">
-                <input type="password" id="password" class="form-control" placeholder="Password" required />
-            </div>
-            <button type="submit" class="btn btn-primary" id="authSubmitBtn">Login</button>
-            <button type="button" class="btn btn-secondary" id="switchAuthBtn">Switch to Sign Up</button>
-        </form>
-    </div>
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h1>Welcome to Workout Buddy!</h1>
+    <p>Track your workouts and progress easily.</p>
+    <div id="message"></div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
-    <script src="scripts.js"></script>
+  <!-- Firebase + JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>
